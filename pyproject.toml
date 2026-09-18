@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compliance-gatekeeper-agents"
+version = "0.1.0"
+description = "Multi-agent system that reviews code/infrastructure changes against a pluggable security & compliance policy pack, auto-approving low-risk changes and escalating the rest."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "langgraph",
+    "langchain-core",
+    "langchain-ollama",
+    "chromadb",
+    "cachetools",
+    "fastapi",
+    "uvicorn",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
